@@ -158,8 +158,7 @@ var GAME = {
 		checkCollision = false;
 		GAME.nextBubble -= 1;
 		
-		if(GAME.nextBubble < 0){
-			
+		if(GAME.nextBubble < 0){	
 			GAME.entities.push(new GAME.Bubble());
 			GAME.nextBubble = (Math.random() * 100) + 100;
 			
@@ -318,7 +317,8 @@ GAME.Bubble = function(){
 	this.update = function(){
 		
 		// move up the screen by 1 pixel
-		this.y -= this.speed;		
+		this.y -= this.speed;
+		
 		// if off-screen, flag for removal
 		if(this.y < -100){			
 			this.remove = true;
